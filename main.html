@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class='use-all-space'>
+<head>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'/>
+    <meta charset='UTF-8'>
+    <title>My Map</title>
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <!-- Replace version in the URL with desired library version -->
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps.css'/>
+    <link rel='stylesheet' type='text/css' href='./css/map.css'/>
+    <script src = "./js/calendar.js"></script>
+</head>
+<body>
+    
+    <div class='map-view'>
+        <form class='side-panel'>
+
+            <header class='title-header'>Information Screen</header>
+
+            <div class='information'>
+                <header class='subtitle-header'>Calendar</header>
+                <div class='subtitle-content'>
+
+                    <!--info about adding calendar: https://www.thatsoftwaredude.com/content/6396/coding-a-calendar-in-javascript-->
+                    <!--calendar doesn't actually function yet still need to work that out-->
+                    <div class="calendar" id="calendar">
+                        <div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+                            <span id="curMonth"></span>
+                            <div id="months" class="months dropdown"></div>
+                        </div>
+                    
+                        <div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+                            <span id="curYear"></span>
+                            <div id="years" class="years dropdown"></div>
+                        </div>
+                    
+                        <div class="clear"></div>
+                    
+                        <div class="calendar-dates">
+                            <div class="days">
+                                <div class="day label">SUN</div>
+                                <div class="day label">MON</div>
+                                <div class="day label">TUE</div>
+                                <div class="day label">WED</div>
+                                <div class="day label">THU</div>
+                                <div class="day label">FRI</div>
+                                <div class="day label">SAT</div>
+                    
+                                <div class="clear"></div>
+                            </div>
+                    
+                            <div id="calendarDays" class="days">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- there has to be a better way to move this calendar up but it'll be filled with other stuff later anyways-->
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+                    <div class="empty">a</div>
+
+                </div>
+            </div>
+
+        </form>
+        <!--the map-->
+        <div id='map'></div>
+    </div>
+
+    <!--the map api stuff-->
+    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps-web.min.js'></script>
+    <script>
+      tt.setProductInfo('BDBI', '1.0');
+      tt.map({
+          key: '93YM3btmcD6APB60bCIozljD4hiYTF0C',
+          container: 'map',
+          center: [-84.3880, 33.7490], // atlanta coordinates, -W N
+          zoom: 13
+      });
+    </script>
+
+</body>
+</html>
