@@ -1,7 +1,11 @@
 const InfoScreen = () => {
     return (
         <div>
-            <div className="calendar-section">
+            <form class='side-panel'>
+            <header class='title-header'>Information Screen</header>
+            <div class='container'>
+                <div class='information'></div>
+                    <div className="calendar-section">
                         <header className='subtitle-header'>Calendar</header>
                         <div className='subtitle-content'>
                             <div className="calendar" id="calendar">
@@ -35,6 +39,8 @@ const InfoScreen = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </form>
             <div className='links'>
                 <a href=''>Home</a>
                 <a href=''>Tutorial</a>
