@@ -7,7 +7,7 @@ var month = 0;
 var year = 0;
 
 function loadCalendarMonths() {
-    for (var i = 0; i < months.length; i++) {
+    for (let i = 0; i < months.length; i++) {
         var doc = document.createElement("div");
         doc.innerHTML = months[i];
         doc.classList.add("dropdown-item");
@@ -29,7 +29,7 @@ function loadCalendarMonths() {
 function loadCalendarYears() {
     document.getElementById("years").innerHTML = "";
 
-    for (var i = startYear; i <= endYear; i++) {
+    for (let i = startYear; i <= endYear; i++) {
         var doc = document.createElement("div");
         doc.innerHTML = i;
         doc.classList.add("dropdown-item");
@@ -55,16 +55,16 @@ function loadCalendarDays() {
     var num = daysInMonth(month, year);
     var dayofweek = tmpDate.getDay();       // find where to start calendar day of week
 
-    for (var i = 0; i <= dayofweek; i++) {
-        var d = document.createElement("div");
+    for (let i = 0; i <= dayofweek; i++) {
+        let d = document.createElement("div");
         d.classList.add("day");
         d.classList.add("blank");
         document.getElementById("calendarDays").appendChild(d);
     }
 
-    for (var i = 0; i < num; i++) {
+    for (let i = 0; i < num; i++) {
         var tmp = i + 1;
-        var d = document.createElement("div");
+        let d = document.createElement("div");
         d.id = "calendarday_" + i;
         d.className = "day";
         d.innerHTML = tmp;
