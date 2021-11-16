@@ -2,6 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
+// https://mui.com/components/slider/
+
 const HourSlider = () => {
     const marks = [
         { value: 0, label: '0',},
