@@ -4,10 +4,10 @@ import HourSlider from './HourSlider'
 const InfoScreen = () => {
     return (
         <div>
-            <form class='side-panel'>
-                <header class='title-header'>Information Screen</header>
-                <div class='container'>
-                    <div class='information'></div>
+            <form className='side-panel'>
+                <header className='title-header'>Information Screen</header>
+                <div className='container'>
+                    <div className='information'></div>
                     <Calendar />
                     <HourSlider />
                     <div className='links'>
