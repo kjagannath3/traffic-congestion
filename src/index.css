@@ -162,8 +162,8 @@ body, *{
   transition: .5s opacity;
 }
 
-.calendar .calendar-dates .days .day.selected:hover {
-  opacity: 1;
+.calendar .calendar-dates .days .day:hover {
+    color: #24aeff;
 }
 
 .calendar .calendar-dates .days .day.label {

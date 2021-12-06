@@ -67,6 +67,23 @@ function loadCalendarDays() {
         d.id = "calendarday_" + i;
         d.className = "day";
         d.innerHTML = tmp;
+        d.onclick = function () {
+            if (d.hasAttribute("selected")) {      
+                d.removeAttribute("selected");
+                this.style.backgroundColor = "white";
+                this.style.color = "black";
+            } else {
+                const elementList = document.querySelectorAll('[selected=""]');
+                elementList.forEach(function(element) { 
+                    element.removeAttribute("selected");
+                    element.style.backgroundColor = "white";
+                    element.style.color = "black";
+                })
+                d.setAttribute("selected", "");
+                this.style.backgroundColor = "#1caff6";
+                this.style.color = "white";
+            }
+        };
 
         document.getElementById("calendarDays").appendChild(d);
     }
